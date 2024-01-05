@@ -6,7 +6,7 @@
 	<div class="wrapper">
 		<the-header />
 
-		<the-footer />
+		<!-- <the-footer /> -->
 	</div>
 </template>
 
@@ -16,18 +16,12 @@
 		font-family: 'Roboto', sans-serif;
 	}
 
-	.wrapper {
-		width: 1366px;
-		margin: 0 auto;
-	}
-
 	:root {
 		--link-color: #122659;
 		--color-red: #ed1c21;
 	}
 
 	a {
-		display: block;
 		text-decoration: none;
 		color: var(--link-color);
 	}
@@ -35,10 +29,5 @@
 	ul {
 		padding: 0;
 		list-style: none;
-	}
-
-	.container {
-		margin-right: auto;
-		margin-left: auto;
 	}
 </style>

@@ -22,6 +22,10 @@ export default defineComponent({
         text: "Контакты",
       },
     ];
+
+    return {
+      nav,
+    };
   },
 });
 </script>
@@ -29,53 +33,39 @@ export default defineComponent({
 <template>
   <header class="the-header">
     <div class="the-header__inner">
-      <div class="the-header__left">
-        <a class="the-header__logo" href="#">CleverBaby</a>
+      <a class="the-header__logo" href="#">CleverBaby</a>
 
-        <ul class="the-header__menu">
-          <li class="the-header__item">
-            <a href="#" class="the-header__menu-link">Методика</a>
-          </li>
-          <li class="the-header__item">
-            <a href="#" class="the-header__menu-link">Преподаватели</a>
-          </li>
-          <li class="the-header__item">
-            <a href="#" class="the-header__menu-link">Группы</a>
-          </li>
-          <li class="the-header__item">
-            <a href="#" class="the-header__menu-link">Отзывы</a>
-          </li>
-          <li class="the-header__item">
-            <a href="#" class="the-header__menu-link">Контакты</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="the-header__right">
-        <a href="tel:+74959834719" class="the-header__tel"
-          >+ 7 (495) 983-47-19</a
+      <nav class="the-header__menu">
+        <a
+          v-for="(item, index) in nav"
+          :key="index"
+          href="#"
+          class="the-header__menu-link"
         >
-      </div>
+          {{ item.text }}
+        </a>
+      </nav>
+
+      <a href="tel:+74959834719" class="the-header__tel">+ 7 (495) 983-47-19</a>
     </div>
   </header>
 </template>
 
 <style scoped lang="scss">
 .the-header {
-  padding: 14px 98px;
+  padding: 30px 98px;
 
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__left {
-    display: flex;
-    align-items: center;
+		max-width: 1170px;
+		margin-left: auto;
+		margin-right: auto;
   }
 
   &__logo {
+    display: block;
     margin-right: 47px;
     font-size: 23px;
     font-weight: 500;
@@ -84,10 +74,12 @@ export default defineComponent({
   &__menu {
     display: flex;
     align-items: center;
+		margin-right: auto;
   }
 
   &__menu-link,
   &__tel {
+    display: block;
     padding: 10px;
     font-size: 16px;
     font-weight: 400;
