@@ -28,9 +28,9 @@ export default defineComponent({
 
 <template>
   <header class="the-header">
-    <div class="the-header__inner container">
+    <div class="the-header__inner">
       <div class="the-header__left">
-        <a class="the-header__link-logo" href="#">CleverBaby</a>
+        <a class="the-header__logo" href="#">CleverBaby</a>
 
         <ul class="the-header__menu">
           <li class="the-header__item">
@@ -62,7 +62,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .the-header {
-  padding: 14px 0;
+  padding: 14px 98px;
 
   &__inner {
     display: flex;
@@ -75,7 +75,7 @@ export default defineComponent({
     align-items: center;
   }
 
-  &__link-logo {
+  &__logo {
     margin-right: 47px;
     font-size: 23px;
     font-weight: 500;
@@ -105,8 +105,8 @@ export default defineComponent({
     font-size: 18px;
 
     &::before {
-      position: absolute;
       content: "";
+      position: absolute;
       width: 15px;
       height: 15px;
       top: 15px;

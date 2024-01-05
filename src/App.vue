@@ -3,16 +3,22 @@
 </script>
 
 <template>
-	<the-header />
+	<div class="wrapper">
+		<the-header />
 
-	<the-footer />
+		<the-footer />
+	</div>
 </template>
 
 <style>
 	body {
-		margin: 0 auto;
+		margin: 0;
 		font-family: 'Roboto', sans-serif;
+	}
+
+	.wrapper {
 		width: 1366px;
+		margin: 0 auto;
 	}
 
 	:root {
@@ -34,6 +40,5 @@
 	.container {
 		margin-right: auto;
 		margin-left: auto;
-		padding: 0 98px;
 	}
 </style>
