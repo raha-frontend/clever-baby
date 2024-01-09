@@ -1,33 +1,63 @@
 <script setup lang="ts">
-import TheHeader from "./components/TheHeader.vue";
+  import TheHeader from './components/TheHeader.vue';
+  import TheIntro from './components/TheIntro.vue';
 </script>
 
 <template>
   <div class="wrapper">
     <the-header />
+    <the-intro />
 
     <!-- <the-footer /> -->
   </div>
 </template>
 
-<style>
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
+<style lang="scss">
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 
-:root {
-  --link-color: #122659;
-  --color-red: #ed1c21;
-}
+  body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: var(--text-color);
+  }
 
-a {
-  text-decoration: none;
-  color: var(--link-color);
-}
+  :root {
+    --text-color: #122659;
+    --color-red: #ed1c21;
+    --bg-color-btn: #FFD787;
+    --bg-color-btn-sec: #8DD9E5;
+    --bg-color-btn-ter: #FEB9CC;
+    --color-black: #231f1e;
+    --color-white: #fff;
+  }
 
-ul {
-  padding: 0;
-  list-style: none;
-}
+  a {
+    text-decoration: none;
+    color: var(--link-color);
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .container {
+    width: 930px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .title {
+    color: var(--text-color);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+  }
 </style>
