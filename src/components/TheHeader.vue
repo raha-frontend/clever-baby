@@ -59,9 +59,9 @@ export default defineComponent({
     display: flex;
     justify-content: space-between;
     align-items: center;
-		max-width: 1170px;
-		margin-left: auto;
-		margin-right: auto;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__logo {
@@ -74,7 +74,7 @@ export default defineComponent({
   &__menu {
     display: flex;
     align-items: center;
-		margin-right: auto;
+    margin-right: auto;
   }
 
   &__menu-link,
