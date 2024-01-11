@@ -1,11 +1,11 @@
 <script lang="ts">
-  import {defineComponent} from 'vue'
+  import {defineComponent, computed} from 'vue'
 
   export default defineComponent({
     props: {
       theme: {
         type: String,
-        default: 'primary' // primary, secondory, tertiary
+        default: 'primary' // primary, secondary, tertiary
       },
       type: {
         type: String,
@@ -17,8 +17,16 @@
       }
     },
 
-    setup() {
+    setup(props) {
+      const classes = computed(() => ({
+        'app-button_secondary': props.theme === 'secondary',
+        'app-button_tertiary': props.theme === 'tertiary',
+        'app-button_disabled' : props.disabled
+      }))
 
+      return {
+        classes,
+      }
     }
   })
 </script>
@@ -27,15 +35,15 @@
   <button
     :type="type"
     :disabled="disabled"
-    :class="{ 'app-button_secondory': theme === 'secondory' }"
-    class="app-btn"
+    class="app-button"
+    :class="classes"
   >
     <slot/>
   </button>
 </template>
 
 <style lang="scss" scoped>
-  .app-btn {
+  .app-button {
     padding: 13px 31px 15px;
     font-size: 16px;
     background-color: var(--bg-color-btn);
@@ -50,8 +58,22 @@
       transition: all 0.3s linear;
     }
 
-    &_secondory {
+    &_secondary {
       background-color: var(--bg-color-btn-sec);
+    }
+
+    &_tertiary {
+      background-color: var(--bg-color-btn-ter);
+    }
+
+    &_disabled {
+      cursor: not-allowed;
+      opacity: 0.8;
+
+      &:hover {
+        background-color: var(--bg-color-btn);
+        color: var(--text-color);
+      }
     }
   }
 </style>

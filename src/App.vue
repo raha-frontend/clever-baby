@@ -1,12 +1,12 @@
 <script setup lang="ts">
   import TheHeader from './components/TheHeader.vue';
-  import TheIntro from './components/TheIntro.vue';
+  import HomeIntro from './components/HomeIntro.vue';
 </script>
 
 <template>
   <div class="wrapper">
     <the-header />
-    <the-intro />
+    <home-intro />
 
     <!-- <the-footer /> -->
   </div>
@@ -16,8 +16,6 @@
   * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
 
@@ -48,7 +46,7 @@
   }
 
   .container {
-    width: 930px;
+    max-width: 930px;
     margin-right: auto;
     margin-left: auto;
   }
