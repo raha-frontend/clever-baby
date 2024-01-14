@@ -1,12 +1,14 @@
 <script setup lang="ts">
   import TheHeader from './components/TheHeader.vue';
   import HomeIntro from './components/HomeIntro.vue';
+  import HomeStudy from './components/HomeStudy.vue';
 </script>
 
 <template>
   <div class="wrapper">
     <the-header />
     <home-intro />
+    <home-study />
 
     <!-- <the-footer /> -->
   </div>
