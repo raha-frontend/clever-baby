@@ -2,7 +2,7 @@
   import { defineComponent } from "vue";
 
   export default defineComponent({
-
+    name: 'HomeStudy',
   })
 </script>
 
@@ -14,7 +14,7 @@
       <div class="study__top">
         <div class="study__info">
           <span class="study__info-title study__span">Играя — обучаем, обучая — развиваем</span>
-          <p class="study__info-descr  study__descr">Мы взяли все самое лучшее из традиционных и современных методик обучения и развития детей.
+          <p class="study__info-descr study__descr">Мы взяли все самое лучшее из традиционных и современных методик обучения и развития детей.
             Обучение английскому языку происходит легко и интересно, ведь малыши не зубрят материал по учебникам, а познают его через игру, сказки, книги и музыку. <br>
             Наша методика также включает в себя обучение по программе Cambridge. Благодаря этому, наши ученики без труда сдают международные и государственные экзамены.
           </p>
@@ -56,172 +56,169 @@
 </template>
 
 <style lang="scss" scoped>
-  .study {
+.study {
 
-    &__inner {
-      padding: 130px 0;
+  &__inner {
+    padding: 130px 0;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 130px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 89px;
+      height: 115px;
+      top: 0;
+      left: -150px;
+      background-image: url(../assets/icons/girl.svg);
+      background-repeat: no-repeat;
     }
 
-    &__title {
-      margin-bottom: 80px;
-      text-align: center;
-      font-size: 36px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 1;
-    }
-
-    &__top {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 130px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 89px;
-        height: 115px;
-        top: 0;
-        left: -150px;
-        background-image: url(../assets/icons/girl.svg);
-        background-repeat: no-repeat;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 135px;
-        height: 68px;
-        top: -180px;
-        right: -70px;
-        background-image: url(../assets/icons/rocket.svg);
-        background-repeat: no-repeat;
-      }
-    }
-
-    &__info {
-      max-width: 414px;
-    }
-
-    &__span {
-      display: block;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 1;
-      margin-bottom: 20px;
-    }
-
-    &__info-title,
-    &__show-title {
-      margin-bottom: 30px;
-    }
-
-    &__descr {
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 1.4;
-    }
-
-    &__show-video iframe{
-      border-radius: 12px;
-      opacity: 0.7;
-
-      &:hover {
-        opacity: 1;
-        transition: 0.3s all linear;
-      }
-    }
-
-    &__bottom {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-
-      &-left {
-        max-width: 300px;
-        padding-top: 81px;
-      }
-
-      &-right {
-        max-width: 244px;
-        padding-top: 35px;
-      }
-      
-      &::before {
-        content: "";
-        position: absolute;
-        width: 332px;
-        height: 381px;
-        top: 22px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-image: url(../assets/images/child.png);
-      }
-    }
-
-    &__development {
-      position: relative;
-      margin-bottom: 185px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 182px;
-        height: 61px;
-        top: -80px;
-        right: -80px;
-        background-image: url(../assets/icons/vector-top-left.svg);
-        background-repeat: no-repeat;
-      }
-    }
-
-    &__teachers {
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 130px;
-        height: 118px;
-        top: -140px;
-        right: 4px;
-        background-image: url(../assets/icons/vector-bottom-left.svg);
-        background-repeat: no-repeat;
-      }
-    }
-
-    &__language {
-      position: relative;
-      margin-bottom: 161px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 140px;
-        height: 105px;
-        bottom: -114px;
-        left: -72px;
-        background-image: url(../assets/icons/vector-top-right.svg);
-        background-repeat: no-repeat;
-      }
-    }
-
-    &__groups {
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 143px;
-        height: 56px;
-        bottom: -24px;
-        left: -150px;
-        background-image: url(../assets/icons/vector-bottom-right.svg);
-        background-repeat: no-repeat;
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 135px;
+      height: 68px;
+      top: -180px;
+      right: -70px;
+      background-image: url(../assets/icons/rocket.svg);
+      background-repeat: no-repeat;
     }
   }
+
+  &__info {
+    max-width: 414px;
+  }
+
+  &__span {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  &__info-title,
+  &__show-title {
+    margin-bottom: 30px;
+  }
+
+  &__descr {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  &__show-video iframe{
+    border-radius: 12px;
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+      transition: 0.3s all linear;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &-left {
+      max-width: 300px;
+      padding-top: 81px;
+    }
+
+    &-right {
+      max-width: 244px;
+      padding-top: 35px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 332px;
+      height: 381px;
+      top: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url(../assets/images/child.png);
+    }
+  }
+
+  &__development {
+    position: relative;
+    margin-bottom: 185px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 182px;
+      height: 61px;
+      top: -80px;
+      right: -80px;
+      background-image: url(../assets/icons/vector-top-left.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__teachers {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 130px;
+      height: 118px;
+      top: -140px;
+      right: 4px;
+      background-image: url(../assets/icons/vector-bottom-left.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__language {
+    position: relative;
+    margin-bottom: 161px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 105px;
+      bottom: -114px;
+      left: -72px;
+      background-image: url(../assets/icons/vector-top-right.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__groups {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 143px;
+      height: 56px;
+      bottom: -24px;
+      left: -150px;
+      background-image: url(../assets/icons/vector-bottom-right.svg);
+      background-repeat: no-repeat;
+    }
+  }
+}
 </style>
