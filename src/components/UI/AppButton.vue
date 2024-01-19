@@ -2,6 +2,8 @@
   import {defineComponent, computed} from 'vue'
 
   export default defineComponent({
+    name: 'AppButton',
+
     props: {
       theme: {
         type: String,
@@ -14,6 +16,10 @@
       disabled: {
         type: Boolean,
         default: false
+      },
+      color: {
+        type: String,
+        default: ''
       }
     },
 
@@ -37,6 +43,7 @@
     :disabled="disabled"
     class="app-button"
     :class="classes"
+    :style="{'background-color': `var(${color})`}"
   >
     <slot/>
   </button>
