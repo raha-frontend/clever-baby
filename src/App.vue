@@ -3,6 +3,7 @@
   import HomeIntro from './components/HomeIntro.vue';
   import HomeStudy from './components/HomeStudy.vue';
   import HomeGroups from "./components/HomeGroups.vue";
+  import HomeTeacher from "./components/HomeTeacher.vue";
 </script>
 
 <template>
@@ -11,6 +12,7 @@
     <home-intro />
     <home-study />
     <home-groups />
+    <home-teacher />
 
     <!-- <the-footer /> -->
   </div>
@@ -37,6 +39,7 @@
     --bg-color-btn-ter: #FEB9CC;
     --color-black: #231f1e;
     --color-white: #fff;
+    --country-text-color: #677085;
   }
 
   a {
