@@ -2,6 +2,7 @@
   import TheHeader from './components/TheHeader.vue';
   import HomeIntro from './components/HomeIntro.vue';
   import HomeStudy from './components/HomeStudy.vue';
+  import HomeGroups from "./components/HomeGroups.vue";
 </script>
 
 <template>
@@ -9,6 +10,7 @@
     <the-header />
     <home-intro />
     <home-study />
+    <home-groups />
 
     <!-- <the-footer /> -->
   </div>

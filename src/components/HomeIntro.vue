@@ -4,7 +4,10 @@
 
   export default defineComponent({
     name: "HomeIntro",
-    components: {AppButton},
+
+    components: {
+      AppButton
+    },
   })
 </script>
 
@@ -25,8 +28,6 @@
 <style lang="scss" scoped>
 .intro {
   min-height: 512px;
-  margin-right: auto;
-  margin-left: auto;
   background-image: url(../assets/images/main-photo.jpg);
   background-position: center top;
   background-repeat: no-repeat;
