@@ -66,8 +66,8 @@
       </div>
       <div class="groups__card">
         <group-card
-            v-for="card in cardList"
-            :key="card.id"
+            v-for="(card, index) in cardList"
+            :key="index"
             :title="card.title"
             :week="card.week"
             :hour="card.hour"
