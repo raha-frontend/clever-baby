@@ -1,5 +1,6 @@
 <script lang="ts">
   import { defineComponent, ref } from "vue";
+
   import AppButton from "./UI/AppButton.vue";
   import GroupCard from "./UI/GroupCard.vue";
 
@@ -66,8 +67,8 @@
       </div>
       <div class="groups__card">
         <group-card
-            v-for="(card, index) in cardList"
-            :key="index"
+            v-for="card in cardList"
+            :key="card.id"
             :title="card.title"
             :week="card.week"
             :hour="card.hour"
