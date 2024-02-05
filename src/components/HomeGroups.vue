@@ -1,5 +1,6 @@
 <script lang="ts">
   import { defineComponent, ref } from "vue";
+
   import AppButton from "./UI/AppButton.vue";
   import GroupCard from "./UI/GroupCard.vue";
 
@@ -61,7 +62,7 @@
   <div class="groups">
     <div class="groups__inner container">
       <div class="groups__top">
-        <div class="groups__title">Наши группы</div>
+        <h2 class="groups__title">Наши группы</h2>
         <div class="groups__text">В группах занимается до 5 человек. Все дети в группе примерно одного возраста и уровня знаний.</div>
       </div>
       <div class="groups__card">

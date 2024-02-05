@@ -11,22 +11,18 @@
         type: String,
         default: ''
       },
-
       week: {
         type: String,
         default: ''
       },
-
       hour: {
         type: String,
         default: ''
       },
-
       price: {
         type: Number,
         default: 0
       },
-
       color: {
         type: String,
         default: ''
@@ -36,17 +32,17 @@
 </script>
 
 <template>
-  <div class="card" :style="{'border-color': `var(${color})`}">
-    <h4 class="card__title"> {{ title }} </h4>
-    <span class="card__week"> {{ week }} </span>
-    <span class="card__hour"> {{ hour }} </span>
-    <div class="card__price"><span class="card__price-span"> {{ price }} &#8381;</span> в месяц</div>
+  <div class="group-card" :style="{'border-color': `var(${color})`}">
+    <h4 class="group-card__title"> {{ title }} </h4>
+    <span class="group-card__week"> {{ week }} </span>
+    <span class="group-card__hour"> {{ hour }} </span>
+    <div class="group-card__price"><span class="group-card__price-span"> {{ price }} &#8381;</span> в месяц</div>
     <app-button class="app-button_secondary" :color="color">Записаться</app-button>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.card {
+.group-card {
   display: flex;
   flex-direction: column;
   align-items: center;
